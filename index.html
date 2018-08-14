@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>
+        Weather App
+    </title>
+    <!-- adds calculator icon to app title -->
+    <link rel="icon" type="image/png" href='https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_24-128.png'>
+    <!-- <link rel="icon" type="image/png" href='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnVsAAWemsgUkuVePi7GFkDitLwZ7WU0OLCUc67zEtkqEn_Mmciw'> -->
+    <!-- <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqOzntQufoXAmNTTpV18x08TkQuLLd2JXDnsaH5YGIcA-56hkTIQ"> -->
+    <!-- links html file to css file -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- links to google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo:700|Pangolin" rel="stylesheet">
+    <!-- links to fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <h1> Weather App </h1>
+    <form action='/forecast.html' method='get' target='_blank' id='form-entry'>
+        <div>
+            <input type='text' id='city' name='city_name' placeholder='enter city, country'>
+            <button type='submit'>Get Weather
+                <i class="fas fa-bolt"></i>
+            </button>
+        </div>
+        <!-- <div id='root-one' class='container'></div> -->
+        <!-- <div class='button'>
+            <button type='submit'>Get Forecast</button>
+            </div> -->
+    </form>
+    <button type='submit' id='refresh-page'>Home
+        <i class="fas fa-home"></i>
+    </button>
+    <!-- links to moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+    <!-- links to javascript file -->
+    <script src="weather-api.js"></script>
+</body>
+</html>
