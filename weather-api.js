@@ -52,27 +52,37 @@ document.querySelector('#form-entry').addEventListener('submit', function (e) {
                     // choose src based on weather using an if condition
                     let weatherIcon = document.createElement('img')
                     if (forecastWeather.includes('sun') && (forecastWeather.includes('rain') || forecastWeather.includes('drizzle'))){
-                        weatherIcon.src = 'https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_17-128.png'
+                        // weatherIcon.src = 'https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_17-128.png'
+                        weatherIcon.src = 'images/rainy-1.svg'
                     } else if (forecastWeather.includes('cloud') && (forecastWeather.includes('rain') || forecastWeather.includes('shower') || forecastWeather.includes('drizzle'))) {
-                        weatherIcon.src = 'https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_13-128.png'
+                        // weatherIcon.src = 'https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_13-128.png'
+                        weatherIcon.src = 'images/rainy-4.svg'
+                        // weatherIcon.src = ''
                     } else if (forecastWeather.includes('cloud') && forecastWeather.includes('snow')) {
                         // weatherIcon.src = 'https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-01-128.png' //'https://cdn4.iconfinder.com/data/icons/iconsland-weather/PNG/128x128/Night_Rain.png'//'https://cdn3.iconfinder.com/data/icons/weather-and-forecast/41/Weather_icons_grey-01-128.png'//"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqOzntQufoXAmNTTpV18x08TkQuLLd2JXDnsaH5YGIcA-56hkTIQ"
-                        weatherIcon.src = 'https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_35-128.png'
+                        // weatherIcon.src = 'https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_35-128.png'
+                        weatherIcon.src = 'images/snowy-5.svg'
                     } else if (forecastWeather.includes('sunny')) {
                         // weatherIcon.src = 'https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-01-128.png' //'https://cdn4.iconfinder.com/data/icons/iconsland-weather/PNG/128x128/Night_Rain.png'//'https://cdn3.iconfinder.com/data/icons/weather-and-forecast/41/Weather_icons_grey-01-128.png'//"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqOzntQufoXAmNTTpV18x08TkQuLLd2JXDnsaH5YGIcA-56hkTIQ"
-                        weatherIcon.src = 'https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_3-128.png'
+                        // weatherIcon.src = 'https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_3-128.png'
+                        weatherIcon.src = 'images/day.svg'
                     } else if (forecastWeather.includes('cloudy')) {
                         // weatherIcon.src = 'https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-22-128.png'
-                        weatherIcon.src = 'https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_1-128.png'
+                        // weatherIcon.src = 'https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_1-128.png'
+                        // weatherIcon.src = 'images/cloudy.svg'
+                        weatherIcon.src = 'images/cloudy.svg'
                     } else if (forecastWeather.includes('rain')) {
                         // weatherIcon.src = 'https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-31-128.png'
-                        weatherIcon.src = 'https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-31-128.png'
+                        // weatherIcon.src = 'https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-31-128.png'
+                        weatherIcon.src = 'images/rainy-6.svg'
                     } else if (forecastWeather.includes('snow')) {
                         // weatherIcon.src = 'https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-24-128.png'
-                        weatherIcon.src = 'https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_28-128.png'
+                        // weatherIcon.src = 'https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_28-128.png'
+                        weatherIcon.src = 'images/snowy-6.svg'
                     } else if (forecastWeather.includes('thunder')) {
                         // weatherIcon.src = 'https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-23-128.png'
-                        weatherIcon.src = 'https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_11-128.png'
+                        // weatherIcon.src = 'https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_11-128.png'
+                        weatherIcon.src = 'images/thunder.svg'
                     }
                     weatherIcon.width = 100
                     // append forecast into respective div
@@ -89,7 +99,7 @@ document.querySelector('#form-entry').addEventListener('submit', function (e) {
                 // console.log(weather.response[0].periods[0])
                 // console.log(weather.response[0].profile)
             } else {
-                alert('Invalid City: Please ensure you type the city name, followed by the country. E.g. Toronto, Canada')
+                alert(`${city} is not a valid entry: please ensure you type the city name, followed by the country. E.g. Toronto, Canada`)
                 // reload page when user clicks ok so they can enter valid city name
                 window.location.reload()
             }
